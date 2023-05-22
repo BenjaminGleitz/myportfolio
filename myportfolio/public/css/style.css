@@ -79,6 +79,7 @@ section {
 footer {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .footer__nav {
@@ -222,8 +223,14 @@ em, strong {
         font-size: 60px;
     }
 
+    /* HOME-PAGE */
+
     .profile-img {
         filter: none;
+    }
+
+    .home__container--left {
+        padding: 0;
     }
 }
 

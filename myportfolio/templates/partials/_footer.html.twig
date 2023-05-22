@@ -1,9 +1,13 @@
 <footer>
 
     <nav class="nav footer__nav">
-        <a class="footer__nav--item" target="_blank" href="https://github.com/BenjaminGleitz"><i class="fab fa-github-square fa-2x"></i></a>
+        <a class="footer__nav--item" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
         <a class="footer__nav--item" target="_blank"  href="https://www.linkedin.com/in/benjamin-gleitz-bab1b5159/"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a class="footer__nav--item">HOME</a>
+        <a class="footer__nav--item"    {% if page == 'home' %}
+                                            href="#ancre" {% else %}
+                                            href="{{ path('home_index') }}"
+                                        {% endif %}
+        >HOME</a>
         <a class="footer__nav--item">ABOUT ME</a>
         <a class="footer__nav--item">PROJECTS</a>
     </nav>
