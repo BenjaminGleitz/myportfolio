@@ -412,7 +412,8 @@ span.arrow i:nth-child(3){
     height: 150px;
     width: 300px;
     transform: translateX(10px) rotateY(25deg) rotateX(10deg);
-    background: skyblue;
+    background: white;
+    border: #000 solid 1px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
