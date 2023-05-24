@@ -367,40 +367,92 @@ span.arrow i:nth-child(3){
     align-items: center;
 }
 
+.project__wrapper {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
 .project__container h2 {
     margin: 0;
 }
 
 .project__card {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin:  40px 100px;
-    border: solid 2px black;
-}
-
-.project__card--text {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    padding: 0;
-    box-shadow: inset 0px 0px 30px #ff7675, 1px 1px 3px white, -1px -1px 3px white;
-}
-
-.project__card--text:nth-child(odd) {
     align-items: center;
-}
-
-.project__card:nth-child(odd) {
-    display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin:  80px 50px;
 }
 
 .project__card--img {
-    height: 250px;
-    width: auto;
+    border: #000 solid 1px;
+    height: 150px;
+    width: 300px;
 }
+
+.project__card--title {
+    margin-top: 200px;
+    color: #000;
+    font-size: 40px;
+}
+
+.wrapper {
+    position: relative;
+    perspective: 40em;
+    display: grid;
+    transform-style: preserve-3d;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    grid-area: 1 / 1;
+    height: 150px;
+    width: 300px;
+    transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+    background: skyblue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    backface-visibility: hidden;
+    box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+  }
+  
+  .wrapper:before {
+    --bw: 9px;
+    grid-area: 1 / 1;
+    content: '';
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    margin-top: calc(-1 * var(--bw));
+    margin-left: calc(-1 * var(--bw));
+    background: transparent;
+    transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+    pointer-events: none;
+    border: var(--bw) solid #000;
+    box-sizing: content-box;
+  }
+  
+  
+  .wrapper:hover > div,
+  .wrapper:hover:before {
+    transform: none;
+  }
+  
+  
+  .wrapper > div,
+  .wrapper:before {
+    will-change: transform;
+    transition: .3s transform cubic-bezier(.25,.46,.45,1);
+  }
+
+  .project__title {
+    color: #000;
+  }
 
 /* ^ RESPONSIVE ^ */
 

@@ -9,27 +9,16 @@
     <div class="project__container">
         <h2>Mes Projets</h2>
         <div class="container project__wrapper">
-            <div class="project__card">
-                <div class="project__card--text">
-                    <h3 class="project__card--title">TITRE</h3>
-                    <p class="project__card--description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, excepturi.</p>
+            {% for project in projects %}
+                <div class="project__card">
+                    <div class="wrapper">
+                        <div class="card">
+                            <img class="project__card--img" src="{{ asset('images/' ~ project.image) }}" alt="">
+                        </div>
+                    </div>
+                    <h2 class="project__card--title"><a class="project__title">{{ project.title }}</a></h2>
                 </div>
-                <img class="project__card--img" src="{{ asset('images/travel-mate.jpg') }}" alt="">
-            </div>
-            <div class="project__card">
-                <div class="project__card--text">
-                    <h3 class="project__card--title">TITRE</h3>
-                    <p class="project__card--description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, excepturi.</p>
-                </div>
-                <img class="project__card--img" src="{{ asset('images/travel-mate.jpg') }}" alt="">
-            </div>
-            <div class="project__card">
-                <div class="project__card--text">
-                    <h3 class="project__card--title">TITRE</h3>
-                    <p class="project__card--description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, excepturi.</p>
-                </div>
-                <img class="project__card--img" src="{{ asset('images/travel-mate.jpg') }}" alt="">
-            </div>
+            {% endfor %}
         </div>
     </div>
 
