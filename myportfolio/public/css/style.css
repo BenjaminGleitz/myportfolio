@@ -170,6 +170,10 @@ footer {
     padding: 0 50px;
 }
 
+.skill__container--skills {
+    padding: 0 100px;
+}
+
 .skill {
     width: 100%;
     display: flex;
@@ -405,9 +409,9 @@ span.arrow i:nth-child(3){
     display: grid;
     transform-style: preserve-3d;
     margin-bottom: 50px;
-  }
-  
-  .card {
+}
+
+.card {
     grid-area: 1 / 1;
     height: 150px;
     width: 300px;
@@ -420,9 +424,9 @@ span.arrow i:nth-child(3){
     padding: 30px;
     backface-visibility: hidden;
     box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
-  }
-  
-  .wrapper:before {
+}
+
+.wrapper:before {
     --bw: 9px;
     grid-area: 1 / 1;
     content: '';
@@ -436,24 +440,55 @@ span.arrow i:nth-child(3){
     pointer-events: none;
     border: var(--bw) solid #000;
     box-sizing: content-box;
-  }
-  
-  
-  .wrapper:hover > div,
-  .wrapper:hover:before {
-    transform: none;
-  }
-  
-  
-  .wrapper > div,
-  .wrapper:before {
+}
+
+
+.wrapper:hover > div,
+.wrapper:hover:before {
+    transform: none;    
+}
+
+
+.wrapper > div,
+.wrapper:before {
     will-change: transform;
     transition: .3s transform cubic-bezier(.25,.46,.45,1);
-  }
+}
 
-  .project__title {
+.project__title {
     color: #000;
-  }
+}
+
+/* ! PROJECT-DETAIL PAGE */
+
+.project-details__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-details__container--left, .project-details__container--right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.project-details__container--left {
+    align-items: start;
+    padding: 0 150px;
+}
+
+.return-project-list {
+    color: #000;
+    padding-left: 150px;
+}
+
+.project-details__card--img {
+    width: 600px;
+    height: auto;
+    border: #000 solid 3px;
+}
 
 /* ^ RESPONSIVE ^ */
 
@@ -480,6 +515,20 @@ span.arrow i:nth-child(3){
 
     .skill__container-- {
         width: 80%;
+    }
+    
+    .project-details__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-details__container--left, .project-details__container--right {
+        width: auto;
+    }
+
+    .project-details__container--left {
+        padding: 0 100px;
+
     }
 }
 

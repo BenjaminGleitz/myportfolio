@@ -10,14 +10,16 @@
         <h2>Mes Projets</h2>
         <div class="container project__wrapper">
             {% for project in projects %}
-                <div class="project__card">
-                    <div class="wrapper">
-                        <div class="card">
-                            <img class="project__card--img" src="{{ asset('images/' ~ project.image) }}" alt="">
+                <a href="{{ path('project_show', {'id': project.id}) }}">
+                    <div class="project__card">
+                        <div class="wrapper">
+                            <div class="card">
+                                <img class="project__card--img" src="{{ asset('images/' ~ project.image) }}" alt="">
+                            </div>
                         </div>
+                        <h2 class="project__card--title"><a class="project__title" href="{{ path('project_show', {'id': project.id}) }}">{{ project.title }}</a></h2>
                     </div>
-                    <h2 class="project__card--title"><a class="project__title">{{ project.title }}</a></h2>
-                </div>
+                </a>
             {% endfor %}
         </div>
     </div>
